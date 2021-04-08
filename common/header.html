@@ -228,7 +228,9 @@
       },
 
       show: function(elem) {
-        return elem.slideDown(TOC_ANIMATION_SPEED);
+        return elem.slideDown(TOC_ANIMATION_SPEED,function() {
+                    document.getElementById('d-toc').scrollLeft += 120;
+                });
       },
 
       scrollTo: function(elem) {
